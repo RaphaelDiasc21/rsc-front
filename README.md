@@ -30,3 +30,11 @@ After npm have installed dependencies
 * [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html) -2.7.2
 * [Google Maps API](https://cloud.google.com/maps-platform/maps/)
 * [Google Routes API](https://cloud.google.com/maps-platform/routes/)
+
+## Team
+
+* [Zenardi Eduardo (SO/OPM73-BR)](https://sourcecode.socialcoding.bosch.com/users/zee8ca)
+* [Lima Eduardo (CI/DAP3.81)](https://sourcecode.socialcoding.bosch.com/users/lde8ca)
+* [Bianchi Pedro (SO/OPM73-BR)]()
+* [Oliveira Bianca (CI/DAV5.8)]()
+* [Barreto Christian (CI/MIR-AM)]()
