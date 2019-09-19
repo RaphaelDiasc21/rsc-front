@@ -1,3 +1,10 @@
 <div class="map-container">
-    <agm-map></agm-map>
+    <agm-map 
+        [latitude]="currentCoord.lat" 
+        [longitude]="currentCoord.lng" 
+        [zoom] = "16"
+        [zoomControl] = "false"
+        [streetViewControl] = "false"
+        >
+    </agm-map>
 </div>
