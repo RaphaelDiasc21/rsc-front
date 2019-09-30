@@ -1,0 +1,57 @@
+.control-container {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    min-width: 300px;
+    width: 10vw;
+    height: 70px;
+    background-color: rgba(112, 112, 112, 0.5);
+    border-radius: 3px;
+}
+
+.buttons {
+    margin-left: 50%;
+    transform: translateX(-25px);
+}
+
+.control-buttons {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.control-btn-play {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: var(--color-bosch-dark-blue);
+    background-image: url(../../../assets/icons/start-play-frame.svg);
+}
+
+.control-btn-play:hover{
+    background-color: #7fc6e7;
+}
+
+.control-btn-play:active{
+    background-color: var(--color-bosch-light-blue);
+}
+
+.control-btn-stop {
+    width: 30px;
+    height: 30px;
+    margin-left: 6px;
+    border: none;
+    background-color: var(--color-bosch-red);
+    background-image: url(../../../assets/icons/stop-frame.svg);
+}
+
+.control-btn-stop:hover {
+    background-color: var(--color-bosch-red-w50);
+}
+
+.control-btn-stop:active {
+    background-color: var(--color-bosch-red-w25);
+}

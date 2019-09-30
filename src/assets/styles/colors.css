@@ -1,0 +1,14 @@
+:root{
+    --color-bosch-red:#EA0016;
+    --color-bosch-red-w25:#EF4050;
+    --color-bosch-red-w50:#F4808B;
+    --color-bosch-fuchsia:#B90276;
+    --color-bosch-violet:#50237F;
+    --color-bosch-dark-blue: #005691;
+    --color-bosch-light-blue:#008ECF;
+    --color-bosch-turqoise:#00A8B0;
+    --color-bosch-light-green:#78BE20;
+    --color-bosch-dark-green:#006249;
+}
+
+/* https://brandguide.bosch.com/document/79/en#/colors */

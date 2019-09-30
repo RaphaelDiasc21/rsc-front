@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/reset.css"
+              "src/assets/styles/reset.css",
+              "src/assets/styles/colors.css"
             ],
             "scripts": []
           },
