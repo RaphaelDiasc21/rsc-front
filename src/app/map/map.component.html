@@ -1,11 +1,23 @@
 <div class="map-container">
     <agm-map 
-        [latitude]="currentCoord.lat" 
-        [longitude]="currentCoord.lng" 
-        [zoom] = "16"
+        [latitude]="flightPlanCoordinates[0]?.lat" 
+        [longitude]="flightPlanCoordinates[0]?.lng" 
+        [zoom] = "18"
         [zoomControl] = "false"
         [streetViewControl] = "false"
         >
+
+        <agm-polyline *ngFor="let polyline of flightPlanCoordinates; let i = index" [strokeColor]="getColor(i)">
+
+            <agm-polyline-point [latitude]="polyline.lat" [longitude]="polyline.lng">
+            </agm-polyline-point>
+
+            <ng-container *ngIf="flightPlanCoordinates[i + 1]">
+                <agm-polyline-point [latitude]="flightPlanCoordinates[i + 1].lat" [longitude]="flightPlanCoordinates[i + 1].lng">
+                </agm-polyline-point>
+            </ng-container>
+
+        </agm-polyline>
     </agm-map>
     
     <rb-controls></rb-controls>

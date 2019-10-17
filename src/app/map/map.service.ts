@@ -30,7 +30,6 @@ export class MapService {
         this.counter++;
       }
 
-      console.log(this.carDataHistory);
       this.carDataHistory.push(jsonData[this.counter]);
     }, MapService.INTERVAL);
 

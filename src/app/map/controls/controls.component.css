@@ -5,8 +5,8 @@
     left: 50%;
     bottom: 50px;
     transform: translateX(-50%);
-    min-width: 300px;
-    width: 10vw;
+    min-width: 175px;
+    width: 7vw;
     height: 70px;
     background-color: rgba(112, 112, 112, 0.5);
     border-radius: 3px;
@@ -35,7 +35,7 @@
     background-color: #7fc6e7;
 }
 
-.control-btn-play:active{
+.control-btn-play:active, .control-btn-play:focus {
     background-color: var(--color-bosch-light-blue);
 }
 
@@ -52,6 +52,6 @@
     background-color: var(--color-bosch-red-w50);
 }
 
-.control-btn-stop:active {
+.control-btn-stop:active, .control-btn-stop:focus {
     background-color: var(--color-bosch-red-w25);
 }
