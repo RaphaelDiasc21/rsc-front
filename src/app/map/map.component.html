@@ -1,19 +1,20 @@
 <div class="map-container">
     <agm-map 
-        [latitude]="flightPlanCoordinates[0]?.lat" 
-        [longitude]="flightPlanCoordinates[0]?.lng" 
-        [zoom] = "18"
+        [latitude]="currentCoord?.lat" 
+        [longitude]="currentCoord?.lng" 
+        [zoom] = "16"
         [zoomControl] = "false"
         [streetViewControl] = "false"
         >
 
-        <agm-polyline *ngFor="let polyline of flightPlanCoordinates; let i = index" [strokeColor]="getColor(i)">
+        <agm-polyline *ngFor="let polyline of carDataHistory; let i = index" [strokeColor]="getColor(i)">
 
             <agm-polyline-point [latitude]="polyline.lat" [longitude]="polyline.lng">
             </agm-polyline-point>
 
-            <ng-container *ngIf="flightPlanCoordinates[i + 1]">
-                <agm-polyline-point [latitude]="flightPlanCoordinates[i + 1].lat" [longitude]="flightPlanCoordinates[i + 1].lng">
+            <!-- TODO: Error when playing -->
+            <ng-container *ngIf="carDataHistory[i + 1]">
+                <agm-polyline-point [latitude]="carDataHistory[i + 1].lat" [longitude]="carDataHistory[i + 1].lng">
                 </agm-polyline-point>
             </ng-container>
 
