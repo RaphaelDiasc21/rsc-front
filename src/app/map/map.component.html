@@ -1,7 +1,7 @@
 <div class="map-container">
     <agm-map 
-        [latitude]="currentCoord?.lat" 
-        [longitude]="currentCoord?.lng" 
+        [latitude]="currentCoord.lat" 
+        [longitude]="currentCoord.lng" 
         [zoom] = "16"
         [zoomControl] = "false"
         [streetViewControl] = "false"
@@ -13,7 +13,7 @@
             </agm-polyline-point>
 
             <!-- TODO: Error when playing -->
-            <ng-container *ngIf="carDataHistory[i + 1]">
+            <ng-container *ngIf="carDataHistory[i + 1] != null">
                 <agm-polyline-point [latitude]="carDataHistory[i + 1].lat" [longitude]="carDataHistory[i + 1].lng">
                 </agm-polyline-point>
             </ng-container>

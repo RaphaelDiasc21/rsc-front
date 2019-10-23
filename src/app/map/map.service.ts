@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter, OnInit } from '@angular/core';
 import { CarData } from '../entity/car-data.model';
+import { element } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -27,16 +28,16 @@ export class MapService {
       // Simulating getting the data from a server
       const response = await fetch('../../assets/location-data-history.json');
       const jsonData = await response.json();
+      if (this.counter >= Object.keys(jsonData).length) {
+        this.stopRecording();
 
-      if (this.counter >= 10) {
-        this.counter = 0;
       } else {
-        this.counter++;
-      }
 
-      this.carDataHistory.push(jsonData[this.counter]);
-      // Emetting the event
-      this.carDataHistoryUpdate.emit(this.carDataHistory);
+        this.counter++;
+        this.carDataHistory.push(jsonData[this.counter]);
+        // Emetting the event
+        this.carDataHistoryUpdate.emit(this.carDataHistory);
+      }
     }, MapService.INTERVAL);
 
   }

@@ -19,16 +19,18 @@ export class MapComponent implements OnInit {
   constructor(private mapService: MapService) { }
 
   ngOnInit(): void {
+
+    // Setting initial position
+    this.setCurrentPosition();
+
     // Listening to changes from MapService
     this.mapService.carDataHistoryUpdate
       .subscribe(
         (carData: CarData[]) => {
+          console.log(carData);
           this.carDataHistory = carData;
         }
       );
-
-    // Setting initial position
-    this.setCurrentPosition();
   }
 
   private setCurrentPosition(): void {
