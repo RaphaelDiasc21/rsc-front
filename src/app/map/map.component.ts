@@ -49,16 +49,12 @@ export class MapComponent implements OnInit {
 
       case(this.carDataHistory[index].speed <= 10):
           return 'green';
-          break;
       case(this.carDataHistory[index].speed <= 20):
           return 'blue';
-          break;
       case(this.carDataHistory[index].speed <= 30):
           return 'red';
-          break;
       default:
           return 'black';
-          break;
     }
   }
 }
