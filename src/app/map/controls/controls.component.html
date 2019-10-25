@@ -1,6 +1,11 @@
 <div class="control-container">
     <div class="buttons">
-        <button class="control-buttons control-btn-play" (click)="onPlayBtnClick()">
+        <button class=" control-btn-pause" (click)="onPlayBtnClick()" 
+            [ngClass]="{
+                'control-buttons': true,
+                'control-btn-pause': isPlaying,
+                'control-btn-play': !isPlaying
+            }">
         </button>
         <button class="control-buttons control-btn-stop" (click)="onResetBtnClick()">
         </button>

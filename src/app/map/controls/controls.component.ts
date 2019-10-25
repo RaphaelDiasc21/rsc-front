@@ -8,7 +8,7 @@ import { MapService } from '../map.service';
 })
 export class ControlsComponent {
 
-  private isPlaying: boolean;
+  private isPlaying = false;
 
   constructor(protected mapService: MapService) { }
 

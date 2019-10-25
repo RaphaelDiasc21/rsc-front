@@ -31,11 +31,34 @@
     background-image: url(../../../assets/icons/start-play-frame.svg);
 }
 
-.control-btn-play:hover{
-    background-color: #7fc6e7;
+.control-btn-pause{
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    background-color: var(--color-bosch-dark-blue);
+    background-image: url(../../../assets/icons/pause-icon.svg);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.control-btn-play:active, .control-btn-play:focus {
+.control-btn-pause::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.control-btn-play:hover, .control-btn-pause:hover{
+    background-color: #126f9b;
+}
+
+.control-btn-play:active, .control-btn-play:focus, .control-btn-pause:active, .control-btn-pause:focus {
     background-color: var(--color-bosch-light-blue);
 }
 
