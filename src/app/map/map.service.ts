@@ -13,6 +13,7 @@ export class MapService {
   // Properties
   private intervalTimer: any;
   private counter = 0;
+
   // Future implementation for backend
   private id;
 
