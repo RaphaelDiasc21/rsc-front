@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+      "target": "https://rb-surface-classifier.azurewebsites.net/",
+      "pathRewrite": {
+        "^/api/*": "/api/"
+        },
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }
